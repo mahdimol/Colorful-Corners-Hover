@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.parent {
+  width: 200px;
+  height: 200px;
+  background-color: #2b2b22;
+  margin: 200px auto;
+  position: relative;
+  overflow: hidden;
+  transition: 300ms;
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  .item-1 {
+    background-color: green;
+    left: -100px;
+    top: -100px;
+    transition: 300ms;
+    transition-delay: 300ms;
+  }
+  .item-2 {
+    background-color: crimson;
+    right: -100px;
+    top: -100px;
+    transition: 300ms;
+    transition-delay: 500ms;
+  }
+  .item-3 {
+    background-color: rgb(148, 123, 223);
+    left: -100px;
+    bottom: -100px;
+    transition: 300ms;
+    transition-delay: 700ms;
+  }
+  .item-4 {
+    background-color: rgb(98, 5, 55);
+    right: -100px;
+    bottom: -100px;
+    transition: 300ms;
+    transition-delay: 900ms;
+  }
+  &:hover .item-1 {
+    top: 0;
+    left: 0;
+  }
+  &:hover .item-2 {
+    right: 0;
+    top: 0;
+  }
+  &:hover .item-3 {
+    left: 0;
+    bottom: 0;
+  }
+  &:hover .item-4 {
+    right: 0;
+    bottom: 0;
+  }
+  &:hover {
+    border-radius: 50%;
+  }
+}
